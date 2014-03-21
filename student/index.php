@@ -48,7 +48,7 @@ include '../body/header.php';
             <div class="row-fluid">
                 <div class="box box-success">
                     <div class="box-header">
-                        <h3 class="box-title">Quick Example</h3>
+                        <h3 class="box-title"><?php echo $table; ?></h3>
                     </div><!-- /.box-header -->
                     <!-- form start -->
                     <form action="" autocomplete="off" method="POST">

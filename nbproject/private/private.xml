@@ -3,15 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/xampp/htdocs/SMS/body/header.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/body/footer.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/index.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/lib/DbManager.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/common/index.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/admin/index.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/lib/IConnectInfo.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/lib/standard_include.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/admin/dashboard.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/register.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/DB.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/Input.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/Validate.php</file>
         </group>
     </open-files>
 </project-private>
