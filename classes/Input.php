@@ -16,14 +16,15 @@ class Input {
     }
 
     public static function get($item) {
-        if (isset($_POST)) {
+        if (array_key_exists($item, $_POST)) {
             return $_POST[$item];
-        } elseif (isset($_GET)) {
+        } elseif (array_key_exists($item, $_GET)) {
             return $_GET[$item];
         }
         return '';
     }
 
 }
+
 ?>
     

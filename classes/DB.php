@@ -121,7 +121,7 @@ class DB {
             $x++;
         }
 
-        $sql = "UPDATE {$table} SET {$set} WHERE UserTableId='{$id}'";
+        $sql = "UPDATE {$table} SET {$set} WHERE UserId='{$id}'";
 
         if (!$this->query($sql, $fields)->error()) {
             return TRUE;

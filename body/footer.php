@@ -4,11 +4,11 @@
 
 
 <!-- jQuery 2.0.2 -->
-<script src="../js/jquery-1.7.2.js" type="text/javascript"></script>
+<script src="../public/js/jquery-1.7.2.js" type="text/javascript"></script>
 <!-- jQuery UI 1.10.3 -->
-<script src="../js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
+<script src="../public/js/jquery-ui-1.10.3.min.js" type="text/javascript"></script>
 <!-- Bootstrap -->
-<script src="../js/bootstrap.min.js" type="text/javascript"></script>
+<script src="../public/js/bootstrap.min.js" type="text/javascript"></script>
 <!-- Morris.js charts -->
 <!--<script src="//cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>-->
 <!--<script src="../js/plugins/morris/morris.min.js" type="text/javascript"></script>-->
@@ -29,7 +29,7 @@
 <!--<script src="../js/plugins/iCheck/icheck.min.js" type="text/javascript"></script>-->
 
 <!-- AdminLTE App -->
-<script src="../js/AdminLTE/app.js" type="text/javascript"></script>
+<script src="../public/js/AdminLTE/app.js" type="text/javascript"></script>
 
 <!-- AdminLTE dashboard demo (This is only for demo purposes) -->
 <!--<script src="../js/AdminLTE/dashboard.js" type="text/javascript"></script>-->        

@@ -1,10 +1,10 @@
 <?php
 
-//header("Location: admin/dashboard.php"); 
+header("Location: auth/index.php"); 
 
-require_once 'core/init.php';
+//require_once 'core/init.php';
 
-$user=DB::getInstance()->get('user_table', array('UserName','=', 'admin'));
+//$user=DB::getInstance()->get('user_table', array('UserName','=', 'admin'));
 
 //$user = DB::getInstance()->insert("user_table", array('UserName', '=', 'admin'));
 
@@ -14,14 +14,16 @@ $user=DB::getInstance()->get('user_table', array('UserName','=', 'admin'));
 //        'Password' => 'New Pass'
 //        ));
 
-if (!$user->count()) {
-    echo 'No User';
-} else {
-    echo $user->first()->UserName;
-//    foreach ($user->results() as $user) {
-//        echo $user->UserName.'<br>';
-//    }
-    
-    //echo $user->results()[0]->UserName;
-}
+//if (!$user->count()) {
+//    echo 'No User';
+//} else {
+//    echo $user->first()->UserName;
+////    foreach ($user->results() as $user) {
+////        echo $user->UserName.'<br>';
+////    }
+//    
+//    //echo $user->results()[0]->UserName;
+//}
 ?>
+
+<a href="auth/register.php">Registration</a>

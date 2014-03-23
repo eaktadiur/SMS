@@ -3,10 +3,13 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/E:/xampp/htdocs/SMS/register.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/classes/DB.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/classes/Input.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/classes/Validate.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/body/header.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/index.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/auth/change_password.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/User.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/Session.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/auth/index.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/auth/register.php</file>
         </group>
     </open-files>
 </project-private>

@@ -1,38 +1,27 @@
 <?php
 
 /**
-* 
-*/
-class Config{
+ * 
+ */
+class Config {
 
-	public static function get($path=null){
+    public static function get($path = null) {
 
-		if($path){
-			$config=$GLOBALS['config'];
-			$path=explode('/', $path);
+        if ($path) {
+            $config = $GLOBALS['config'];
+            $path = explode('/', $path);
 
 
-			foreach ($path as $key => $value) {
-				if(isset($config[$value])){
-					$config= $config[$value]; 
-				}
-				
-			}
+            foreach ($path as $key => $value) {
+                if (isset($config[$value])) {
+                    $config = $config[$value];
+                }
+            }
 
-			return $config;
-		}
+            return $config;
+        }
+    }
 
-	}
-	
-	
 }
-
-
-
-
-
-
-
-
 
 ?>

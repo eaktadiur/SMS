@@ -14,12 +14,12 @@ class Validate {
         foreach ($items as $item => $rules) {
             foreach ($rules as $rule => $rule_value) {
                 //echo "{$item} {$rule} must be {$rule_value} <br>";
-                $value = $source[$item];
+                $value = trim($source[$item]);
                 //echo $value . '<br>';
                 $item = escape($item);
 
                 if ($rule === 'required' && empty($value)) {
-                    $this->addError("{$value} is required");
+                    $this->addError("{$item} is required");
                 } elseif (!empty($value)) {
                     switch ($rule) {
                         case 'min':
@@ -61,12 +61,12 @@ class Validate {
         $this->_error[] = $error;
     }
 
-    public function error() {
+    public function errors() {
         return $this->_error;
     }
 
     public function passed() {
-        $this->_passed;
+        return $this->_passed;
     }
 
 }

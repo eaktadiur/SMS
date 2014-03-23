@@ -2,14 +2,15 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>AdminLTE | Dashboard</title>
+        <title>Schoolify SMS</title>
+
         <meta content='width=device-width, initial-scale=1, maximum-scale=1' name='viewport'>
         <!-- bootstrap 3.0.2 -->
-        <link href="../css/bootstrap.min.css" rel="stylesheet" type="text/css" />
+        <link href="../public/css/bootstrap.min.css" rel="stylesheet" type="text/css" />
         <!-- font Awesome -->
-        <link href="../css/font-awesome.min.css" rel="stylesheet" type="text/css" />
+        <link href="../public/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
         <!-- Ionicons -->
-        <link href="../css/ionicons.min.css" rel="stylesheet" type="text/css" />
+        <link href="../public/css/ionicons.min.css" rel="stylesheet" type="text/css" />
         <!-- Morris chart -->
         <!--<link href="../css/morris/morris.css" rel="stylesheet" type="text/css" />-->
         <!-- jvectormap -->
@@ -21,8 +22,8 @@
         <!-- bootstrap wysihtml5 - text editor -->
         <!--<link href="../css/bootstrap-wysihtml5/bootstrap3-wysihtml5.min.css" rel="stylesheet" type="text/css" />-->
         <!-- Theme style -->
-        <link href="../css/AdminLTE.css" rel="stylesheet" type="text/css" />
-
+        <link href="../public/css/AdminLTE.css" rel="stylesheet" type="text/css" />
+        <link rel='shortcut icon' type='image/x-icon' href='../public/img/favicon.ico'/>
         <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
         <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
         <!--[if lt IE 9]>
@@ -33,7 +34,7 @@
     <body class="skin-blue">
         <!-- header logo: style can be found in header.less -->
         <header class="header">
-            <a href="index.html" class="logo">
+            <a href="../index.php" class="logo">
                 <!-- Add the class icon to your logo image or logo icon to add the margining -->
                 <img src="../public/img/schoolify.png"/> 
             </a>
@@ -48,7 +49,7 @@
                     <span class="icon-bar"></span>
                 </a>
                 <div class="navbar-right">
-                    <?php if ($userName) { ?>
+                    <?php if (Session::get(Config::get('session/session_name'))) { ?>
                         <ul class="nav navbar-nav">
                             <!-- Messages: style can be found in dropdown.less-->
                             <li class="dropdown messages-menu">
@@ -64,7 +65,7 @@
                                             <li><!-- start message -->
                                                 <a href="#">
                                                     <div class="pull-left">
-                                                        <img src="../img/rajib.jpg" class="img-circle" alt="User Image"/>
+                                                        <img src="../public/img/rajib.jpg" class="img-circle" alt="User Image"/>
                                                     </div>
                                                     <h4>
                                                         Support Team
@@ -76,7 +77,7 @@
                                             <li>
                                                 <a href="#">
                                                     <div class="pull-left">
-                                                        <img src="../img/avatar2.png" class="img-circle" alt="user image"/>
+                                                        <img src="../public/img/avatar2.png" class="img-circle" alt="user image"/>
                                                     </div>
                                                     <h4>
                                                         AdminLTE Design Team
@@ -88,7 +89,7 @@
                                             <li>
                                                 <a href="#">
                                                     <div class="pull-left">
-                                                        <img src="../img/avatar.png" class="img-circle" alt="user image"/>
+                                                        <img src="../public/img/avatar.png" class="img-circle" alt="user image"/>
                                                     </div>
                                                     <h4>
                                                         Developers
@@ -100,7 +101,7 @@
                                             <li>
                                                 <a href="#">
                                                     <div class="pull-left">
-                                                        <img src="../img/avatar2.png" class="img-circle" alt="user image"/>
+                                                        <img src="../public/img/avatar2.png" class="img-circle" alt="user image"/>
                                                     </div>
                                                     <h4>
                                                         Sales Department
@@ -112,7 +113,7 @@
                                             <li>
                                                 <a href="#">
                                                     <div class="pull-left">
-                                                        <img src="../img/avatar.png" class="img-circle" alt="user image"/>
+                                                        <img src="../public/img/avatar.png" class="img-circle" alt="user image"/>
                                                     </div>
                                                     <h4>
                                                         Reviewers
@@ -242,36 +243,27 @@
                             <li class="dropdown user user-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <i class="glyphicon glyphicon-user"></i>
-                                    <span>Jane Doe <i class="caret"></i></span>
+                                    <span><?php echo Session::get(Config::get('session/session_name')); ?> <i class="caret"></i></span>
                                 </a>
                                 <ul class="dropdown-menu">
                                     <!-- User image -->
                                     <li class="user-header bg-light-blue">
-                                        <img src="../img/rajib.jpg" class="img-circle" alt="User Image" />
+                                        <img src="../public/img/rajib.jpg" class="img-circle" alt="User Image" />
                                         <p>
-                                            Jane Doe - Web Developer
+                                            <?php echo Session::get(Config::get('session/session_name')); ?> - Web Developer
                                             <small>Member since Nov. 2012</small>
                                         </p>
                                     </li>
-                                    <!-- Menu Body -->
-                                    <li class="user-body">
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Followers</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Sales</a>
-                                        </div>
-                                        <div class="col-xs-4 text-center">
-                                            <a href="#">Friends</a>
-                                        </div>
-                                    </li>
                                     <!-- Menu Footer-->
-                                    <li class="user-footer">
-                                        <div class="pull-left">
-                                            <a href="#" class="btn btn-default btn-flat">Profile</a>
+                                    <li class="user-body user-footer">
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../auth/update.php">Profile</a>
                                         </div>
-                                        <div class="pull-right">
-                                            <a href="#" class="btn btn-default btn-flat">Sign out</a>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../auth/change_password.php">Change Password</a>
+                                        </div>
+                                        <div class="col-xs-4 text-center">
+                                            <a href="../auth/logout.php">Sign out</a>
                                         </div>
                                     </li>
                                 </ul>
@@ -283,7 +275,7 @@
 
         </header>
         <div class="wrapper row-offcanvas row-offcanvas-left">
-            <?php if ($userName) { ?>
+            <?php if (Session::get(Config::get('session/session_name'))) { ?>
                 <!-- Left side column. contains the logo and sidebar -->
                 <aside class="left-side sidebar-offcanvas">
                     <!-- sidebar: style can be found in sidebar.less -->
@@ -291,10 +283,10 @@
                         <!-- Sidebar user panel -->
                         <div class="user-panel">
                             <div class="pull-left image">
-                                <img src="../img/rajib.jpg" class="img-circle" alt="User Image" />
+                                <img src="../public/img/rajib.jpg" class="img-circle" alt="User Image" />
                             </div>
                             <div class="pull-left info">
-                                <p>Hello, Jane</p>
+                                <p>Hello, <?php echo Session::get(Config::get('session/session_name')); ?></p>
 
                                 <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
                             </div>
@@ -354,6 +346,7 @@
                                 </a>
                                 <ul class="treeview-menu">
                                     <li><a href="../student/index.php"><i class="fa fa-angle-double-right"></i> Student </a></li>
+                                    <li><a href="../auth/register.php"><i class="fa fa-angle-double-right"></i> Register </a></li>
                                     <li><a href="student/forms/general.html"><i class="fa fa-angle-double-right"></i> General Elements</a></li>
                                     <li><a href="pages/forms/advanced.html"><i class="fa fa-angle-double-right"></i> Advanced Elements</a></li>
                                     <li><a href="pages/forms/editors.html"><i class="fa fa-angle-double-right"></i> Editors</a></li>
