@@ -1,6 +1,6 @@
 <?php
 require_once '../Core/init.php';
-include_once '../body/header.php ';
+include_once '../body/header.php';
 //require_once 'core/init.php';
 //var_dump(Token::check(Input::get('token')));
 
@@ -82,7 +82,7 @@ if (Input::exitsts()) {
     <section class="content box">
         <div class="row">
 
-            <div class="col-lg-12">
+            <div class="col-lg-6">
                 <div class="box box-success">
                     <div class="box-header">
                         <h3 class="box-title">New Registration</h3>

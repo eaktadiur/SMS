@@ -41,7 +41,7 @@ if (Input::exitsts()) {
     }
 }
 
-include_once '../body/header.php ';
+include_once '../body/header.php';
 ?>
 
 

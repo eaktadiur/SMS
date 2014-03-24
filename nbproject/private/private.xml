@@ -4,12 +4,19 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/E:/xampp/htdocs/SMS/body/header.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/index.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/auth/change_password.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/classes/User.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/classes/Session.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/auth/lock_screen.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/lib/DbManager.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/student/index.php</file>
             <file>file:/E:/xampp/htdocs/SMS/auth/index.php</file>
-            <file>file:/E:/xampp/htdocs/SMS/auth/register.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/DB.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/Core/init.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/functions/sanitize.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/Redirect.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/auth/login.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/public/css/AdminLTE.css</file>
+            <file>file:/E:/xampp/htdocs/SMS/pages/examples/lockscreen.html</file>
+            <file>file:/E:/xampp/htdocs/SMS/lib/standard_include.php</file>
+            <file>file:/E:/xampp/htdocs/SMS/classes/Cookie.php</file>
         </group>
     </open-files>
 </project-private>

@@ -1,10 +1,11 @@
 <?php
-require_once '../lib/DbManager.php';
+require_once '../Core/init.php';
+include '../body/header.php';
 
-$table = getParam('table');
+$table = Input::get('table');
 
 
-if (isSave()) {
+if (Input::exitsts()) {
 
     $Unit = array(
         'unit' => "UnitId", //table name
@@ -16,9 +17,9 @@ if (isSave()) {
     echo "<script>location.replace('../unit/index.php');</script>";
 }
 
-$tableList = rs2array("SHOW TABLES");
+//$tableList = DB::rs2array("SHOW TABLES");
 
-include '../body/header.php';
+
 ?>
 <!-- Right side column. Contains the navbar and content of the page -->
 <aside class="right-side">
@@ -38,9 +39,7 @@ include '../body/header.php';
     <section class="content box">
 
         <form action="" autocomplete="off" method="POST">
-            <?php
-            comboBox('table', $tableList, $table, TRUE);
-            ?>
+            <?php comboBox('table', $tableList, $table, TRUE); ?>
             <button type="submit" name="Submit">Show</button>
         </form>
 

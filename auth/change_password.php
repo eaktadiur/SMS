@@ -1,6 +1,6 @@
 <?php
 require_once '../Core/init.php';
-include_once '../body/header.php ';
+include_once '../body/header.php';
 
 $user = new User();
 

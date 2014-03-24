@@ -34,6 +34,19 @@ class User {
         }
     }
 
+    public  function hasPermission($key) {
+        $group = $this->_db->get('groups', array('GroupId', '=', $this->data()->Group));
+
+        if ($group->count()) {
+            $permissions = json_decode($group->first()->Permissions, TRUE);
+
+            if ($permissions[$key] == TRUE) {
+                return TRUE;
+            }
+        }
+        return FALSE;
+    }
+
     public function create($fields = array()) {
 
         if (!$this->_db->insert('user_table', $fields)) {
@@ -107,7 +120,5 @@ class User {
     public function isLoggedIn() {
         return $this->_isLoggedIn;
     }
-    
-    
 
 }

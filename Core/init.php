@@ -1,6 +1,7 @@
 <?php
 
 error_reporting(E_ERROR | E_WARNING | E_PARSE);
+ob_start();
 session_start();
 
 $GLOBALS['config'] = array(

@@ -49,8 +49,9 @@
                     <span class="icon-bar"></span>
                 </a>
                 <div class="navbar-right">
-                    <?php if (Session::get(Config::get('session/session_name'))) { ?>
+                    
                         <ul class="nav navbar-nav">
+                            <?php if (Session::get(Config::get('session/session_name'))) { ?>
                             <!-- Messages: style can be found in dropdown.less-->
                             <li class="dropdown messages-menu">
                                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
@@ -268,8 +269,12 @@
                                     </li>
                                 </ul>
                             </li>
+                            <?php }  else {?>
+                               <li class="header"><a href="login.php">Log In</a></li>
+                            <?php
+                           } ?>   
                         </ul>
-                    <?php } ?>        
+                         
                 </div>
             </nav>
 
@@ -288,7 +293,7 @@
                             <div class="pull-left info">
                                 <p>Hello, <?php echo Session::get(Config::get('session/session_name')); ?></p>
 
-                                <a href="#"><i class="fa fa-circle text-success"></i> Online</a>
+                                <a href="../auth/lock_screen.php"><i class="fa fa-circle text-success"></i> Lock Screen</a>
                             </div>
                         </div>
                         <!-- search form -->

@@ -1340,6 +1340,7 @@ body > .header .logo .icon {
   border-top-right-radius: 0;
   border-bottom-right-radius: 3px;
   border-bottom-left-radius: 3px;
+  padding: 0 5px;
 }
 .box .box-body > table,
 .box .box-body > .table {
@@ -2229,6 +2230,8 @@ Component: timeline
   border-radius: 4px;
   margin: 10px auto;
   width: 290px;
+  height: 45px;
+  padding-top: 5px;
 }
 .lockscreen-item:before,
 .lockscreen-item:after {
@@ -2242,9 +2245,8 @@ Component: timeline
 .lockscreen-item > .lockscreen-image {
   position: absolute;
   left: -10px;
-  top: -30px;
+  top: -15px;
   background: #fff;
-  padding: 10px;
   -webkit-border-radius: 50%;
   -moz-border-radius: 50%;
   border-radius: 50%;
